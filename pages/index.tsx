@@ -3,11 +3,13 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Navbarrr from "../components/Navbarrr";
 
 export default function Home() {
   return (
     <>
       <Navbar></Navbar>
+      <Navbarrr></Navbarrr>
       <Head>
         <title>Systemische Beratung Freund</title>
         <meta name="description" content="Systemische Beratung Freund" />
