@@ -1,13 +1,11 @@
 import Head from "next/head";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import Navbarrr from "./Navbarrr";
 import styles from "../styles/Home.module.css";
+import Footer from "./Footer";
+import Navbarrr from "./Navbarrr";
 
 export default function Layout({ children }): JSX.Element {
   return (
     <>
-      <Navbar />
       <Navbarrr />
       <Head>
         <title>Systemische Beratung Freund</title>

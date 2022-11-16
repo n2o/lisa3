@@ -6,6 +6,8 @@ export function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
   const [hasMounted, setHasMounted] = useState(false);
 
+  const iconSize = 20;
+
   useEffect(() => setHasMounted(true), []);
 
   if (!hasMounted) return null;
@@ -13,13 +15,13 @@ export function ThemeSwitch() {
   if (theme === "dark") {
     return (
       <button onClick={() => setTheme("light")}>
-        <SunIcon width={24} />
+        <SunIcon height={iconSize} />
       </button>
     );
   } else {
     return (
       <button onClick={() => setTheme("dark")}>
-        <MoonIcon width={24} />
+        <MoonIcon height={iconSize} />
       </button>
     );
   }

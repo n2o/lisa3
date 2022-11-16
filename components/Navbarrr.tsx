@@ -7,14 +7,14 @@ export default function Navbarrr() {
     <Navbar fluid={true} rounded={true}>
       <Navbar.Brand href="https://flowbite.com/">
         <Image
-          className="block h-8 w-auto lg:hidden"
+          className="block h-8 w-auto pr-2"
           src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
           width={30}
           height={30}
           alt="Your Company"
         />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          Flowbite
+          Freund
         </span>
       </Navbar.Brand>
       <Navbar.Toggle />
