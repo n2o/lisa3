@@ -1,9 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import { Props } from "./commonTypes";
 import Footer from "./Footer";
 import Navbarrr from "./Navbarrr";
 
-export default function Layout({ children }): JSX.Element {
+export default function Layout({ children }: Props): JSX.Element {
   return (
     <>
       <Navbarrr />
