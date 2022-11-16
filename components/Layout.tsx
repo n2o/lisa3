@@ -13,9 +13,7 @@ export default function Layout({ children }: Props): JSX.Element {
         <meta name="description" content="Systemische Beratung Freund" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
-      </div>
+      <main className={styles.main}>{children}</main>
       <Footer />
     </>
   );

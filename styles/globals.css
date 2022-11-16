@@ -24,11 +24,15 @@
   }
 
   p {
-    @apply pb-3;
+    @apply pb-1;
   }
 
   label span {
     @apply text-gray-700 text-sm dark:text-gray-100 font-medium;
+  }
+
+  .content {
+    @apply container mx-auto;
   }
 }
 
