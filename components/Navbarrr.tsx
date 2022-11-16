@@ -1,5 +1,6 @@
 import { Navbar } from "flowbite-react";
 import Image from "next/image";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 export default function Navbarrr() {
   return (
@@ -25,6 +26,9 @@ export default function Navbarrr() {
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
         <Navbar.Link href="/navbars">Contact</Navbar.Link>
+        <Navbar.Link>
+          <ThemeSwitch />
+        </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
