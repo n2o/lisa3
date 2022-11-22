@@ -19,13 +19,18 @@ export default function Navbarrr() {
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link href="/navbars" active={true}>
-          Home
+        <Navbar.Link href="/" active={true}>
+          Start
         </Navbar.Link>
-        <Navbar.Link href="/navbars">About</Navbar.Link>
-        <Navbar.Link href="/navbars">Services</Navbar.Link>
-        <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-        <Navbar.Link href="/navbars">Contact</Navbar.Link>
+        <Navbar.Link href="/einzelberatung">Einzelberatung</Navbar.Link>
+        <Navbar.Link href="/paarberatung">Paarberatung</Navbar.Link>
+        <Navbar.Link href="/familienberatung">Familienberatung</Navbar.Link>
+        <Navbar.Link href="/teamberatung">Teamberatung</Navbar.Link>
+        <Navbar.Link href="/tiergestuetzte-arbeit">
+          Tiergestützte Arbeit
+        </Navbar.Link>
+        <Navbar.Link href="/ueber-mich">Über mich</Navbar.Link>
+        <Navbar.Link href="/leitbild">Leitbild</Navbar.Link>
         <Navbar.Link>
           <ThemeSwitch />
         </Navbar.Link>

@@ -6,6 +6,7 @@ import Navbarrr from "./Navbarrr";
 export default function Layout({ children }: Props): JSX.Element {
   return (
     <>
+      {/* <Navbar /> */}
       <Navbarrr />
       <Head>
         <title>Systemische Beratung Freund</title>
