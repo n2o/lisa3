@@ -44,7 +44,9 @@ export default function Home() {
             Unterstützung zu suchen immer noch sehr hoch. So sei Ihnen an dieser
             Stelle gesagt:
           </p>
-          <p>Den ersten Schritt zur Veränderung haben Sie bereits gemacht!</p>
+          <p className="italic">
+            Den ersten Schritt zur Veränderung haben Sie bereits gemacht!
+          </p>
         </Card>
       </section>
     </Layout>
