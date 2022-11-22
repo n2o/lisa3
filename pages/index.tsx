@@ -11,22 +11,25 @@ export default function Home() {
         <meta name="description" content="Systemische Beratung Freund" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative">
-        <img
-          src="/img/sandbank.webp"
-          alt="Hintergrundbild. Man sieht links und rechts Berge, in der Mitte eine Sandbank im Fluss."
-        />
-        <div className="absolute rounded-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-2 bg-gray-600/50">
-          <div className="text-white py-1 text-xl md:text-2xl xl:text-4xl">
-            &quot;Vielleicht stehen wir uns manchmal selbst im Weg, damit wir
-            über unsere Bedürfnisse stolpern&quot;
+
+      <div className="w-full h-96 bg-fixed bg-center bg-cover bg-[url('/img/sandbank.webp')]">
+        <div className="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-40 py-12">
+          <div className="text-center">
+            <div className="container px-4 mx-auto">
+              <div className="max-w-4xl mx-auto text-center">
+                <span className="text-gray-200 dark:text-gray-300 font-semibold text-xl md:text-2xl lg:text-3xl">
+                  &quot;Vielleicht stehen wir uns manchmal selbst im Weg, damit
+                  wir über unsere Bedürfnisse stolpern&quot;
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <section className="content pt-5">
         <Card>
-          <h1>Herzlich Willkommen</h1>
+          <h1 className="pt-0">Herzlich Willkommen</h1>
           <p>
             Sehen wir uns nicht alle bei Zeit im Alltag gewissen
             Herausforderungen ausgesetzt, die in einem Moment kaum der Rede wert

@@ -5,7 +5,7 @@ import { ThemeSwitch } from "./ThemeSwitch";
 export default function Navbarrr() {
   return (
     <Navbar fluid={true} rounded={true}>
-      <Navbar.Brand href="https://flowbite.com/">
+      <Navbar.Brand href="/">
         <Image
           className="block h-8 w-auto pr-2"
           src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
