@@ -4,12 +4,19 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
+import { ThemeSwitch } from "./ThemeSwitch";
+
+const button = {
+  base: "px-3 py-2 rounded-md text-sm font-medium transition",
+  active: "text-primary dark:text-white",
+  inactive:
+    "dark:text-gray-300  text-gray-800 hover:underline dark:hover:text-white",
+};
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Start", href: "/", current: true },
+  { name: "Über mich", href: "/ueber-mich", current: false },
+  { name: "Leitbild", href: "/leitbild", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -26,12 +33,12 @@ function Dropdown() {
 
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-          Leistungsbeschreibung
-          <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-        </Menu.Button>
-      </div>
+      <Menu.Button
+        className={classNames(button.base, button.inactive, "inline-flex")}
+      >
+        Leistungsbeschreibungen
+        <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+      </Menu.Button>
 
       <Transition
         as={Fragment}
@@ -49,10 +56,7 @@ function Dropdown() {
                 <Menu.Item as="div" key={`dropdown-item-${item.name}`}>
                   <Link
                     href={item.href}
-                    className={classNames(
-                      false ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block px-4 py-2 text-sm"
-                    )}
+                    className="text-gray-700 block px-4 py-2 text-sm"
                   >
                     {item.name}
                   </Link>
@@ -91,40 +95,26 @@ export default function Navbar() {
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     width={30}
                     height={30}
-                    alt="Your Company"
+                    alt="Systemische Beratung Freund"
                   />
                   <Image
                     className="hidden h-8 w-auto lg:block"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     width={30}
                     height={30}
-                    alt="Your Company"
+                    alt="Systemische Beratung Freund"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    <Dropdown />
-                    <Link
-                      href="/"
-                      className={classNames(
-                        false
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "px-3 py-2 rounded-md text-sm font-medium"
-                      )}
-                    >
-                      Link
-                    </Link>
                     {navigation.map((item) => {
                       return (
                         <Link
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current
-                              ? "bg-gray-900 text-white"
-                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                            "px-3 py-2 rounded-md text-sm font-medium"
+                            item.current ? button.active : button.inactive,
+                            button.base
                           )}
                           aria-current={item.current ? "page" : undefined}
                         >
@@ -132,6 +122,8 @@ export default function Navbar() {
                         </Link>
                       );
                     })}
+                    <Dropdown />
+                    <ThemeSwitch />
                   </div>
                 </div>
               </div>

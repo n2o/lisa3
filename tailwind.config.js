@@ -7,7 +7,13 @@ module.exports = {
     "./node_modules/flowbite-react/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: "#6466f1",
+        },
+      },
+    },
   },
   darkMode: "class",
   plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
