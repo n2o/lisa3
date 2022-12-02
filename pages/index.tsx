@@ -2,6 +2,7 @@
 import { Card } from "flowbite-react";
 import Head from "next/head";
 import Layout from "../components/Layout";
+import { Profile } from "../components/Profile";
 
 export default function Home() {
   return (
@@ -49,6 +50,7 @@ export default function Home() {
           </p>
         </Card>
       </section>
+      <Profile />
     </Layout>
   );
 }
