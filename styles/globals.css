@@ -40,6 +40,7 @@
   .image {
     @apply rounded shadow-xl dark:shadow-gray-800 mx-auto max-w-lg h-auto mt-5 md:mt-0;
   }
+
 }
 
 :root {
