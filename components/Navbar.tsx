@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { ThemeSwitch } from "./ThemeSwitch";
+import { classNames } from "./utils";
 
 const button = {
   base: "px-3 py-2 rounded-md text-sm font-medium transition",
@@ -18,10 +19,6 @@ const navigation = [
   { name: "Über mich", href: "/ueber-mich", current: false },
   { name: "Leitbild", href: "/leitbild", current: false },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 function Dropdown() {
   const items = [
@@ -56,7 +53,7 @@ function Dropdown() {
                 <Menu.Item as="div" key={`dropdown-item-${item.name}`}>
                   <Link
                     href={item.href}
-                    className="text-gray-700 block px-4 py-2 text-sm"
+                    className="text-gray-700 block px-4 py-2"
                   >
                     {item.name}
                   </Link>
@@ -123,7 +120,7 @@ export default function Navbar() {
                       );
                     })}
                     <Dropdown />
-                    <ThemeSwitch />
+                    <ThemeSwitch className="block px-5" />
                   </div>
                 </div>
               </div>
@@ -138,9 +135,7 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    item.current ? button.active : button.inactive,
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
@@ -148,6 +143,8 @@ export default function Navbar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <Dropdown />
+              <ThemeSwitch className="block ms-3" buttonClass="m-3" />
             </div>
           </Disclosure.Panel>
         </>

@@ -1,8 +1,15 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { classNames } from "./utils";
 
-export function ThemeSwitch() {
+export function ThemeSwitch({
+  className = "",
+  buttonClass = "",
+}: {
+  className?: string;
+  buttonClass?: string;
+}) {
   const { theme, setTheme } = useTheme();
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -14,14 +21,14 @@ export function ThemeSwitch() {
 
   if (theme === "dark") {
     return (
-      <button onClick={() => setTheme("light")}>
-        <SunIcon height={iconSize} />
+      <button className={className} onClick={() => setTheme("light")}>
+        <SunIcon className={classNames(buttonClass)} height={iconSize} />
       </button>
     );
   } else {
     return (
-      <button onClick={() => setTheme("dark")}>
-        <MoonIcon height={iconSize} />
+      <button className={className} onClick={() => setTheme("dark")}>
+        <MoonIcon className={classNames(buttonClass)} height={iconSize} />
       </button>
     );
   }
